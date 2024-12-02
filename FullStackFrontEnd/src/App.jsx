@@ -1,10 +1,15 @@
 import './App.css'
 
+import { Signup } from './pages/Signup'
+import { AppRoutes } from './routes/AppRoutes'
+import { Navbar } from './routes/navbar'
+
 function App() {
 
   return (
     <>
-      <h1>Dinesh Rinwa</h1>
+      <Navbar/>
+      <AppRoutes/>
     </>
   )
 }

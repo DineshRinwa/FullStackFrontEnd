@@ -1,42 +1,251 @@
 #root {
   max-width: 1280px;
+}
+
+/* Navbar Container */
+.navbar-container {
+  width: 80%;
   margin: 0 auto;
+  padding: 0.8rem 2rem;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  border-left: 5px solid red;
+  border-top: 5px solid red;
+  border-top-left-radius: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky; /* Sticks to top on scroll */
+  top: 0;
+  z-index: 100; /* Ensures it's above other elements */
+}
+
+/* Navbar Links */
+.navbar-container > a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Navbar Links Hover State */
+.navbar-container > a:hover {
+  color: #6a5acd;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* Navbar Active Link (Optional) */
+.navbar-container > a.active {
+  color: #6a5acd;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-container > a {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Container for Signup Form */
+.signup-container,
+.login-container,
+.create-product-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: auto;
+  width: 50%;
+  margin-top: 3rem;
   padding: 2rem;
-  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header Styling */
+.signup-container > h1,
+.login-container > h1,
+.create-product-container > h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Form Styling */
+.signup-container > form,
+.login-container > form,
+.create-product-container > form {
+  width: 50%;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Input and Select Styling  textarea*/
+.signup-container > form > input,
+.login-container > form > input,
+.create-product-container > form > input,
+.create-product-container > form > textarea,
+.signup-container > form > select {
+  width: 100%;
+  padding: 0.8rem 1.4rem;
+  outline: none;
+  font-family: "Poppins", cursive;
+  border-radius: 1rem;
+  font-size: 1rem;
+
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input and Select Focus State */
+.signup-container > form > input:focus,
+.login-container > form > input:focus,
+.create-product-container > form > input:focus,
+.signup-container > form > select:focus,
+.create-product-container > form > select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styling */
+.submit_btn {
+  padding: 0.8rem 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  cursor: pointer;
+
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Submit Button Hover State */
+.submit_btn:hover {
+  color: #fff;
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .signup-container,
+  .login-container,
+  .create-product-container {
+    width: 90%;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .signup-container > form,
+  .login-container > form,
+  .create-product-container > form {
+    width: 90%;
+  }
+
+  .signup-container > h1,
+  .login-container > h1,
+  .create-product-container > form {
+    font-size: 1.5rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ----------- */
+.product-container {
+  max-width: 80%;
+  margin: auto; /* Center the container */
+  padding: 20px; /* Add padding for spacing */
+  background-color: #d4c7c7; /* Light background */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-.card {
-  padding: 2em;
+.product-container h1 {
+  font-size: 2rem; /* Large title font */
+  color: #333333; /* Dark gray for readability */
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px; /* Space below the heading */
 }
 
-.read-the-docs {
-  color: #888;
+.product-cart {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Wrap items to the next row if needed */
+  gap: 20px; /* Space between product cards */
+  justify-content: center; /* Center all products */
+}
+
+
+
+/* Css For Product */
+.product {
+  background-color: #f9f9f9; /* Light background for a clean look */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px; /* Spacing inside the card */
+  margin: 15px; /* Spacing between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+  text-align: center; /* Center-align text */
+}
+
+.product h2 {
+  font-size: 1.5rem; /* Larger font for product name */
+  color: #333; /* Dark text for readability */
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1rem; /* Standard font size for details */
+  color: #555; /* Medium gray for details */
+  margin: 5px 0; /* Spacing between text */
+}
+
+.product .btn {
+  display: inline-block; /* Button alignment */
+  padding: 10px 20px; /* Button size */
+  background-color: #007bff; /* Primary blue color */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.product .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
