@@ -1,6 +1,7 @@
 # FullStackFrontEnd
+# Project Root
+
  <pre>
-project/
 ├── components/
 │   ├── Navbar.html         # Navbar component
 │   ├── AppRoutes.html      # Simulated routing links
@@ -13,5 +14,4 @@ project/
 ├── styles/
 │   ├── Navbar.css          # Navbar-specific styles
 │   ├── Global.css          # Global styles
-
   </pre>
