@@ -1,5 +1,5 @@
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+// import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -26,7 +26,7 @@ export const Product = () => {
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (token) {
-      const decoded = jwtDecode(token); // Decode token
+      const decoded = token // Decode token
       setUserId(decoded.userId); // Set the user role
       console.log("Decoded Role:", decoded.userId);
     }

@@ -7,6 +7,7 @@ import { Login } from "../pages/Login";
 export const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
       <Route path="/login" element={<Login />} />
       <Route path="/product" element={<Product />} />
       <Route path="/create_product" element={<CreateProduct />} />
